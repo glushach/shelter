@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <title>PETS</title>
+    <link rel="stylesheet" href="../../normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container-pets">
+        <div class="header-wrap">
+            <header class="header-pets"> <!-- start header -->
+                <div class="logo__block logo__block-pets">
+                    <a href="../main/index.html"><h1>Cozy House</h1></a>
+                    <p>Shelter for pets in Boston</p>
+                </div>
+                <nav class="overlay">
+                    <div class="navigation">
+                        <div class="logo__block logo__block-pets-burger">
+                            <a href="../main/index.html"><h1>Cozy House</h1></a>
+                            <p>Shelter for pets in Boston</p>
+                        </div>
+                        <ul class="list list__pets">
+                            <li class="navigation__item"><a class="navigation__link" href="../main/index.html">About the shelter</a></li>
+                            <li class="navigation__item navigation__item-active"><a class="navigation__link" href="#!">Our pets</a></li>
+                            <li class="navigation__item"><a class="navigation__link" href="../main/index.html#help">Help the shelter</a></li>
+                            <li class="navigation__item"><a class="navigation__link" href="#contacts">Contacts</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="burger__wrapper">
+                    <div class="header__burger header__burger-pets">
+                        <div class="burger__line burger__line_first burger__line-pets"></div>
+                        <div class="burger__line burger__line_second burger__line-pets"></div>
+                        <div class="burger__line burger__line_third burger__line-pets"></div>
+                    </div>
+                </div>
+            </header> <!-- end header -->
+        </div>
+
+        <div class="our-pets-wrap">
+            <section class="main-our-friends">
+                <h2 class="main-our-friends__title">Our friends who <br /> are looking for a house</h2>
+                <div class="cards">
+                    <div class="card card-1" data-modal="0">
+                        <img src="../../assets/images/main/pets-katrine.png" alt="Katrine">
+                        <div class="card__title">Katrine</div>
+                        <button class="card__btn">Learn more</button>
+                    </div>
+                    <div class="card card-2" data-modal="1">
+                        <img src="../../assets/images/main/pets-jennifer.jpg" alt="Jennifer">
+                        <div>
+                            <div class="card__title">Jennifer</div>
+                            <button class="card__btn">Learn more</button>
+                        </div>
+                    </div>
+                    <div class="card card-3" data-modal="2">
+                        <img src="../../assets/images/main/pets-woody.png" alt="Woody">
+                        <div>
+                            <div class="card__title">Woody</div>
+                            <button class="card__btn">Learn more</button>
+                        </div>
+                    </div>
+                    <div class="card card-4" data-modal="3">
+                        <img src="../../assets/images/main/pets-sophia.png" alt="Sophia">
+                        <div>
+                            <div class="card__title">Sophia</div>
+                            <button class="card__btn">Learn more</button>
+                        </div>
+                    </div>
+                    <div class="card card-5" data-modal="4">
+                        <img src="../../assets/images/main/pets-timmy.png" alt="Timmy">
+                        <div>
+                            <div class="card__title">Timmy</div>
+                            <button class="card__btn">Learn more</button>
+                        </div>
+                    </div>
+                    <div class="card card-6" data-modal="5">
+                        <img src="../../assets/images/main/pets-charly.png" alt="Charly">
+                        <div>
+                            <div class="card__title">Charly</div>
+                            <button class="card__btn">Learn more</button>
+                        </div>
+                    </div>
+                    <div class="card card-7" data-modal="6">
+                        <img src="../../assets/images/main/pets-scarlet.png" alt="Scarlett">
+                        <div>
+                            <div class="card__title">Scarlett</div>
+                            <button class="card__btn">Learn more</button>
+                        </div>
+                    </div>
+                    <div class="card card-8" data-modal="7">
+                        <img src="../../assets/images/main/freddie.png" alt="Freddie">
+                        <div>
+                            <div class="card__title">Freddie</div>
+                            <button class="card__btn">Learn more</button>
+                        </div>
+                    </div>
+                </div> <!-- end cards -->
+                <div class="dots">
+                    <button class="dots__item" id="double-left" disabled="disabled">< <</button>
+                    <button class="dots__item" id="single-left" disabled="disabled"><</button>
+                    <button class="dots__item dots__item-active" id="number">1</button>
+                    <button class="dots__item" id="single-right">></button>
+                    <button class="dots__item" id="double-right">> ></button>
+                </div>
+            </section> <!--end container-pets -->
+
+            <footer class="footer" id="contacts">
+                <div class="footer__wrapper">
+                    <div class="footer__item">
+                        <h2>For questions and suggestions</h2>
+                        <a class="footer__email" href="mailto:email@shelter.com">
+                            <img src="../../assets/icons/footer/mail.svg" alt="Mail">
+                            <span>email@shelter.com</span>
+                        </a>
+                        <a class="footer__phone" href="tel:+136745677554">
+                            <img src="../../assets/icons/footer/phone.svg" alt="Phone">
+                            <span>+13 674 567 75 54</span>
+                        </a>
+                    </div>
+                    <div class="footer__item">
+                        <h2>We are waiting for your visit</h2>
+                        <a class="footer__address-1" href="https://maps.google.com?saddr=Current+Location&daddr=43.12345,-76.12345" target="_blank">
+                            <img src="../../assets/icons/footer/pin-little.svg" alt="Mail">
+                            <span>1 Central Street, Boston (entrance from the store)</span>
+                        </a>
+                        <a class="footer__address-2" href="https://maps.google.com?saddr=Current+Location&daddr=43.12345,-76.12345" target="_blank">
+                            <img src="../../assets/icons/footer/pin-big.svg" alt="Phone">
+                            <span>18 South Park, London </span>
+                        </a>
+                    </div>
+                </div>
+                <img class="footer__puppy" src="../../assets/images/footer-puppy.png" alt="Footer puppy">
+            </footer>
+        </div>
+    </div> <!--end container-pets -->
+
+    <div class="overlay-modal">
+        <div class="modal">
+            <div class="modal__close">&times;</div>
+            <div class="modal__inner">
+                <div class="modal__photo">
+                    <img src="../../assets/images/modal/pets-jennifer.png" alt="Jennifer">
+                </div> <!-- end left -->
+                <div class="modal__content">
+                    <div class="modal__title">Jennifer</div>
+                    <div class="modal__subtitle">Dog - Labrador</div>
+                    <div class="modal__description">
+                        Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.
+                    </div>
+                    <ul class="modal__list">
+                        <li class="modal__list-item"><b>Age:</b> <span>2 months</span></li>
+                        <li class="modal__list-item"><b>Inoculations:</b> <span>none</span></li>
+                        <li class="modal__list-item"><b>Diseases:</b> <span>none</span></li>
+                        <li class="modal__list-item"><b>Parasites:</b> <span>none</span></li>
+                    </ul>
+                </div> <!-- end right -->
+            </div>
+        </div>
+    </div>
+
+    <script src="../lodash.min.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

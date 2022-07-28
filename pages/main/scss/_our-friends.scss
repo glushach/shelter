@@ -1,0 +1,207 @@
+.our-friends {
+  width: 100%;
+  min-height: 877px;
+  background: #F6F6F6;
+  padding: 80px 40px 0 40px;
+  @media (max-width: 1279px) {
+    padding: 81px 30px 0 30px;
+  }
+  @media (max-width: 767px) {
+    padding: 43px 10px 0 10px;
+    min-height: 791px;
+  }
+  text-align: center;
+  &__description {
+    max-width: 400px;
+    margin: 0 auto;
+    @include font(35px, 'Georgia Regular', 400);
+    letter-spacing: 0.06em;
+    color: #545454;
+    line-height: 45px; /* 18.04.2022 */
+    text-align: center;
+    @media (max-width: 1279px) {
+      line-height: 45px;
+    }
+    @media (max-width: 767px) {
+      @include font(25px, 'Georgia Regular');
+      line-height: 31.5px;
+      letter-spacing: 0.065em;
+    }
+  }
+}
+.wrapper {
+  width: 1075px;
+  @include flex();
+  overflow: hidden;
+  @media (max-width: 1279px) {
+    width: 618px;
+  }
+  @media (max-width: 767px) {
+    width: 310px; // по ширене карточки с учетом
+  }
+}
+.carousel__inners {
+  position: relative;
+  @include flex();
+  left: -1075px;
+  @media (max-width: 1279px) {
+    left: -618px;
+  }
+  @media (max-width: 767px) {
+    left: -310px; // по ширене карточки с учетом боковых margin
+  }
+}
+@keyframes move-right {
+  from { left: -100% }
+  to { left: -200% }
+}
+.transition-right {
+  animation-name: move-right;
+  animation-duration: 2.5s;
+}
+
+@keyframes move-left {
+  from { left: -100% }
+  to { left: 0 }
+}
+.transition-left {
+  animation-name: move-left;
+  animation-duration: 2.5s;
+}
+
+.carousel {
+  margin: 60px 0;
+  width: 100%;
+  @include flex(space-between, center);
+  @media (max-width: 767px) {
+    position: relative;
+    margin-top: 40.5px;
+    margin-bottom: 115px;
+    @include flex(center);
+  }
+  &__inner {
+    margin: 0 auto;
+    @include flex(space-around);
+  }
+  &__card {
+    width: 270px;
+    height: 435px;
+    @include flex(space-between, center, column);
+    background: #FAFAFA;
+    text-align: center;
+    transition: all .5s;
+    margin: 0 44.3px;
+    div {
+      height: 165px;
+    }
+    @media (max-width: 1279px) {
+      margin: 0 18.8px; // по 20px c каждой стороны
+    }
+    &:hover {
+      cursor: pointer;
+      background: #FFFFFF;
+    }
+    &:hover .btn {
+      background: #FDDCC4;
+    }
+    &-2 {
+      @media (max-width: 1279px) {
+        display: none;
+      }
+    }
+    &-1 {
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+  }
+  &__title {
+    @include font(20px, 'Georgia Regular', 400);
+    color: #545454;
+    letter-spacing: 0.05em;
+    text-align: center;
+    margin-top: 29px;
+  }
+  &__left, &__right {
+    width: 52px;
+    height: 52px;
+    border: 2px solid #F1CDB3;
+    border-radius: 50%;
+    @include flex(center, center);
+    transition: all .5s;
+    @media (max-width: 767px) {
+      position: absolute;
+      bottom: -73px;
+    }
+    &:hover {
+      cursor: pointer;
+      background: #FDDCC4;
+    }
+  }
+  &__left {
+    &:disabled {
+      border-color: #B2B2B2;
+      color: #B2B2B2;
+      &:hover {
+        background: transparent;
+        cursor: default;
+      }
+    }
+    @media (max-width: 767px) {
+      left: 58px;
+    }
+  }
+  &__right {
+    &:disabled {
+      border-color: #B2B2B2;
+      color: #B2B2B2;
+      &:hover {
+        background: transparent;
+        cursor: default;
+      }
+    }
+    @media (max-width: 767px) {
+      right: 58px;
+    }
+  }
+}
+.btn {
+  width: 187px;
+  height: 52px;
+  background: #FAFAFA;
+  @include font(17px, 'Georgia Regular', 400);
+  color: #545454;
+  border: 2px solid #F1CDB3;
+  outline: #F1CDB3;
+  border-radius: 30px;
+  margin: 30px 0;
+  transition: all .5s;
+  letter-spacing: 0.06em;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.btn-known {
+  width: 261px;
+  height: 52px;
+  border: none;
+  outline: #F1CDB3;
+  background: #F1CDB3;
+  border-radius: 30px;
+  @include font(17px, 'Georgia Regular', 400);
+  letter-spacing: 0.06em;
+  color: #292929;
+  @include flex(center, center);
+  margin: 0 auto;
+  transition: all .5s;
+  a {
+    width: 261px;
+    height: 52px;
+    @include flex(center, center);
+    color: #292929;
+  }
+  &:hover {
+    cursor: pointer;
+    background: #FDDCC4;
+  }
+}

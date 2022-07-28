@@ -1,0 +1,97 @@
+.footer {
+  min-height: 350px;
+  @include flex(space-between, start);
+  background: radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%);
+  padding: 40px 40px 0 40px;
+  @media (max-width: 1279px) {
+    @include flex(center, center, column);
+    padding: 32px 65px 0 65px; /* 18.04.2022 */
+  }
+  @media (max-width: 767px) {
+    padding: 30px 10px 0 10px;
+  }
+  &__wrapper {
+    width: 61.1%;
+    @include flex(space-between, start);
+    padding-top: 17px;
+    @media (max-width: 1279px) {
+      width: 100%;
+      padding-top: 0;
+      margin-bottom: 66px;
+    }
+    @media (max-width: 767px) {
+      @include flex(center, center, column);
+      margin-bottom: 44px;
+    }
+  }
+  &__item {
+    max-width: 295px;
+    @media (max-width: 1279px) {
+      max-width: 300px;
+    }
+    h2 {
+      @include font(35px, 'Georgia Regular', 400);
+      letter-spacing: 0.06em;
+      line-height: 45px;
+      color: #ffffff;
+      @media (max-width: 767px) {
+        @include font(25px, 'Georgia Regular');
+        text-align: center;
+        line-height: 33px;
+        letter-spacing: 0.05em;
+        margin: 0 10px;
+      }
+    }
+  }
+
+  &__email, &__phone, &__address-1, &__address-2 {
+    @include flex(start, end);
+  }
+  &__email {
+    margin-top: 42px;
+    @media (max-width: 767px) {
+      margin: 41px 23px 0 23px;
+    }
+  }
+
+  &__phone {
+    margin-top: 41px;
+    @media (max-width: 1279px) {
+      margin-top: 41px;
+    }
+    @media (max-width: 767px) {
+      margin: 41px 30px 42px 30px;
+    }
+  }
+
+
+
+  &__address-1 {
+    margin-top: 30px;
+    min-height: 50px;
+    @include flex(flex-start, center);
+    @media (max-width: 767px) {
+      margin-top: 35px;
+    }
+  }
+
+
+
+  &__address-2 {
+    margin-top: 29px;
+    @media (max-width: 767px) {
+      margin-top: 35px;
+    }
+  }
+  span {
+    margin-left: 20px;
+  }
+  a {
+    @include font(20px, 'Georgia Regular', 400);
+    letter-spacing: 0.06em;
+    color: #F1CDB3;
+  }
+  &__email, &__address-1 {
+    margin-bottom: 10px;
+  }
+}

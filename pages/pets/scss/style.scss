@@ -1,0 +1,100 @@
+@import "../../../assets/common/common";
+@import "../../../assets/common/header";
+
+/*ЭТО ФАИЛ ДЛЯ PETS*/
+
+// ДУБЛИРОВАННЫЙ КОД ИЗ MAIN НЕ ПОДКЛЮЧАТЬ
+
+@import "our-friends";
+
+
+@import "../../../assets/common/footer";
+@import "../../../assets/common/modal";
+
+.container-pets {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.header-wrap {
+  height: 120px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background: #ffffff;
+}
+.header-pets {
+  padding-top: 13px;
+  margin: 0 auto;
+  @media (max-width: 1279px) { //////////////////
+    max-width: 1280px;
+    padding: 13px 30px 0 30px;
+  }
+  @media (max-width: 767px) {
+    padding: 13px 11px 0 11px;
+    position: relative;
+  }
+
+  h1 {
+    color: #545454;
+    &:hover {
+      color: #F1CDB3;
+    }
+  }
+  p {
+    color: #292929;
+  }
+  a {
+    color: #545454;
+    @media (max-width: 767px) {
+      color: white;
+    }
+  }
+  .navigation__link-active {
+    color: #292929;
+  }
+}
+.logo__block-pets {
+  margin-top: 18px;
+  top: 0;
+  opacity: 1;
+  transition: all .6s;
+  &-burger {
+    display: none;
+    position: relative;
+    top: 31px;
+    left: 10px;
+    @media (max-width: 767px) {
+      display: flex;
+      @include fontLogo();
+    }
+  }
+  &-active {
+    opacity: 0;
+  }
+}
+.burger__line-pets {
+  background: #000000;
+}
+.list__pets {
+  height: 143px;
+  @media (max-width: 767px) {
+    height: auto;
+    top: 261px;
+  }
+  .navigation__item {
+    margin-bottom: 50px;
+  }
+}
+.burger-pets-active {
+  position: fixed;
+  transform: rotate(90deg);
+  transition: all .6s;
+  .burger__line-pets {
+    background-color: #F1CDB3;
+  }
+}
+.our-pets-wrap {
+  transform: translateY(120px);
+}

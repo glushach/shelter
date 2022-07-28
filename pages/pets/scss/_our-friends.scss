@@ -1,0 +1,134 @@
+.main-our-friends {
+  background: #F6F6F6;
+  padding-top: 84px;
+  padding-bottom: 99px; /* 18.04.2022 */
+  @media (max-width: 1279px) {
+    padding-bottom: 75px;
+  }
+  @media (max-width: 767px) {
+    padding-top: 46px;
+    line-height: 55px;
+    padding-bottom: 42px;
+  }
+  &__title {
+    @include font(35px, 'Georgia Regular', 400);
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    padding-bottom: 61.3px; /* 18.04.2022 */
+    color: #B2B2B2;
+    @media (max-width: 1279px) {
+      padding-bottom: 30px;
+    }
+    @media (max-width: 767px) {
+      @include font(25px, 'Georgia Regular');
+      line-height: 30px;
+      padding-bottom: 42px;
+    }
+  }
+
+  .cards {
+    padding: 0 40px;
+    @include flex(space-between, start, row, wrap);
+    @media (max-width: 1279px) {
+      @include flex(center, start, row, wrap);
+      margin: 0 auto;
+      max-width: 900px;
+      column-gap: 40px;
+    }
+    @media (max-width: 767px) {
+      padding: 0 15px;
+      @include flex(center, center, column);
+    }
+  }
+  .card {
+    width: 270px;
+    height: 436px;
+    background: #FAFAFA;
+    text-align: center;
+    margin-bottom: 30px;
+    @include flex(space-between, center, column);
+    &__title {
+      margin-top: 30px;
+      letter-spacing: 0.04em;
+      color: #B2B2B2;
+      @include font(20px, 'Georgia Regular', 400);
+      @media (max-width: 1279px) {
+        margin-top: 29px;
+      }
+    }
+    &:hover {
+      cursor: pointer;
+      background: #FFFFFF;
+    }
+    &:hover button {
+      background: #FDDCC4;
+    }
+    @media (max-width: 767px) {
+      margin-bottom: 29px;
+    }
+    &-7, &-8 {
+      @media (max-width: 1279px) {
+        display: none;
+      }
+    }
+    &-4, &-5, &-6 {
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+  }
+  .card__btn {
+    width: 185px;
+    height: 52px;
+    border: 2px solid #F1CDB3;
+    background: #FAFAFA;
+    margin: 30px 0;
+    @include font(17px, 'Georgia Regular', 400);
+    letter-spacing: 0.04em;
+    color: #292929;
+    border-radius: 25px;
+    @media (max-width: 1279px) {
+      margin: 30px 0 29px 0;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+.dots {
+  width: 340px;
+  margin: 30px auto 0 auto;
+  @media (max-width: 1279px) {
+    margin-top: 10px;
+  }
+  @media (max-width: 767px) {
+    width: 300px;
+    margin-top: 12px;
+  }
+  @include flex(space-between);
+  &__item {
+    width: 52px;
+    height: 52px;
+    border: 1px solid #F1CDB3;
+    border-radius: 50%;
+    background: transparent;
+    @include flex(center, center);
+    cursor: pointer;
+    &-active {
+      background: #F1CDB3;
+      cursor: default;
+    }
+    &:hover {
+      background: #F1CDB3;
+    }
+    &:disabled {
+      border-color: #B2B2B2;
+      color: #B2B2B2;
+      &:hover {
+        background: transparent;
+        cursor: default;
+      }
+    }
+  }
+}

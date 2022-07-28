@@ -1,0 +1,115 @@
+.addition {
+  margin-top: 85px;  /* 18.04.2022 */
+  margin-bottom: 1px; /* 18.04.2022 */
+  min-height: 463px;
+  background: #F6F6F6;
+  @include flex(center, center);
+  @media (max-width: 1279px) {
+    @include flex(center, center, column-reverse);
+    margin-top: 88px;
+    padding-top: 83px;
+    margin-bottom: 0;
+  }
+  @media (max-width: 767px) {
+    margin-top: 28px;
+    padding-top: 45px;
+  }
+  &__photo {
+    margin-bottom: 16px;
+    @media (max-width: 1279px) {
+      margin-bottom: 100px;
+    }
+    @media (max-width: 767px) {
+      width: 83%;
+      margin-bottom: 40.5px;
+      img {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+.donation {
+  max-width: 380px;
+  min-height: 282px;
+  margin-left: 30px;
+  margin-bottom: 18px;
+  @media (max-width: 1279px) {
+    margin-left: 0;
+    margin-bottom: 57px;
+  }
+  @media (max-width: 767px) {
+    margin-bottom: 36.5px;
+  }
+  &__title {
+    @include font(35px, 'Georgia Regular', 400);
+    letter-spacing: 0.06em;
+    color: #545454;
+    line-height: 45px;
+    width: 80%;
+    @media (max-width: 1279px) {
+      width: 80%;
+      line-height: 43px;
+    }
+    @media (max-width: 767px) {
+      margin: 0 auto;
+      text-align: center;
+      @include font(25px, 'Georgia Regular');
+      line-height: 31px;
+    }
+  }
+  &__subtitle {
+    @include font(15px, 'Georgia Regular', 400);
+    color: #545454;
+    margin-top: 16.3px;
+    letter-spacing: 0.06em;
+    @media (max-width: 767px) {
+      margin-top: 20px;
+      letter-spacing: 0;
+    }
+  }
+  &__text {
+    @include font(12px);
+    font-style: italic;
+    margin-top: 20px;
+    line-height: 18px;
+    color: #B2B2B2;
+  }
+  &__wrapper {
+    @media (max-width: 767px) {
+      margin: 0 20px;
+    }
+  }
+}
+.card {
+  max-width: 350px;
+  height: 43px;
+  background: #F1CDB3;
+  margin-top: 17px;
+  border-radius: 10px;
+  @include flex(flex-start, center);
+  transition: all .5s;
+  @media (max-width: 767px) {
+    margin-top: 19px;
+  }
+  &:hover {
+    background: #FDDCC4;
+  }
+   &__text {
+     font-family: Georgia, sans-serif;
+     font-size: 22.4px;
+     @media (max-width: 767px) {
+       font-size: 14.4px;
+     }
+   }
+  img {
+    margin: 0 15px;
+  }
+  a {
+    color: #545454;
+    @media (max-width: 767px) {
+      font-size: 15px;
+      letter-spacing: 0.06em;
+    }
+  }
+ }
